@@ -1,3 +1,55 @@
 body {
   background: papayawhip;
 }
+*{
+  border: 1px solid hotpink;
+}
+/* Default settings for mobile view less than 600px*/
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  gap: 1em;
+}
+
+.a, .b, .f{
+  text-align: center;
+  width: 100%;
+}
+.a, .c, .d, .e, .f{
+  height: 20vh;
+  text-align: center;
+}
+.b{
+  height: 40vh;
+}
+.c, .d, .e{
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Adjusts viewport to desktop view when less than 600px */
+@media (min-width: 600px){
+  .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .a {
+    grid-row: 1;
+    grid-column: 1/5;
+  }
+  .b{
+    grid-column: 1/4;
+  }
+  .f{
+    grid-row: 2/4;
+    grid-column: 4;
+  }
+  .a, .c, .d, .e, .f {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,3 +1,35 @@
 body {
   background: blanchedalmond;
 }
+*{
+  border: 1px solid hotpink;
+}
+/* Default settings for mobile view less than 600px*/
+.container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 1em;
+  
+}
+.a, .c{
+  flex-grow: 1;
+  text-align: center;
+}
+.b{
+  flex-grow: 3;
+  text-align: center;
+}
+
+/* Adjusts viewport to desktop view when less than 600px */
+@media (min-width: 600px){
+  .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .a{
+    width: 100%;
+  }
+  
+}
